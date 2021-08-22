@@ -1,6 +1,6 @@
 # Pewlett Hackard Analysis
 ## Overview
-The purpose of this analysis is to help the company Pewlett Hackard determine the number people who are eligible for retirement so they can determinen who is retiring and prepare for the number of future job vacancies. It is also used to determine a list of current retirement ready employees who are eligible to mentor new employees in preparation of the large number of retiring employees.
+The purpose of this analysis is to help the company Pewlett Hackard determine the number people who are eligible for retirement so they can determine who is retiring and prepare for the number of future job vacancies. It is also used to determine a list of current retirement ready employees who are eligible to mentor new employees in preparation of the large number of retiring employees.
 
 ## Results
 ### List of Retiring Employees by Title
@@ -18,7 +18,7 @@ Using the COUNT and GROUP BY functions and selecting the unique_title.csv table,
 ![Image](https://github.com/kochx384/Pewlett-Hackard-Analysis/blob/main/images/retiring_titles.png)
 
 ### List of Employees Eligible for Mentorship Program
-Pewlett Hackard wants to know who is eligible to help mentor new employees as a large amount of employees are retiring in the near future. Employees who are born between January 1, 1965 and December 31, 1965 are eligible for the mentorship program. Therefore, a table was created with a list of employees born between those two dates (mentorship_eligibility.csv). 
+Pewlett Hackard wants to know who is eligible to help mentor new employees as a large number of employees are retiring in the near future. Employees who are born between January 1, 1965 and December 31, 1965 are eligible for the mentorship program. Therefore, a table was created with a list of employees born between those two dates (mentorship_eligibility.csv). 
 
 ![Image](https://github.com/kochx384/Pewlett-Hackard-Analysis/blob/main/images/mentorship_eligibility.png)
 
