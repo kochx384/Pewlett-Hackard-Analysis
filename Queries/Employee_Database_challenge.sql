@@ -73,6 +73,7 @@ WHERE (de.to_date = '9999-01-01')
 AND (e.birth_date BETWEEN '1964-01-01' AND '1965-12-31')
 ORDER BY emp_no;
 
+-- Create a mentorship eligible employees count by titles table based on new birthdate range
 SELECT COUNT (title), title
 INTO mentorship_titles_2
 FROM mentorship_eligibility_2 as me
