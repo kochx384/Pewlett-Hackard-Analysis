@@ -46,3 +46,35 @@ ON (e.emp_no = titles.emp_no)
 WHERE (de.to_date = '9999-01-01')
 AND (e.birth_date BETWEEN '1965-01-01' AND '1965-12-31')
 ORDER BY emp_no;
+
+-- Additional Queries/Tables
+-- Create a mentorship eligible employees count by titles table
+SELECT COUNT (title), title
+INTO mentorship_titles
+FROM mentorship_eligibility as me
+GROUP BY me.title
+ORDER BY COUNT (title) DESC;
+
+-- Create a new mentorship eligible employees list with larger birthdate range
+SELECT DISTINCT ON (emp_no) e.emp_no,
+	e.first_name,
+	e.last_name,
+	e.birth_date,
+	de.from_date,
+	de.to_date,
+	titles.title
+INTO mentorship_eligibility_2
+FROM employees as e
+INNER JOIN dept_emp as de
+ON (e.emp_no = de.emp_no)
+INNER JOIN titles
+ON (e.emp_no = titles.emp_no)
+WHERE (de.to_date = '9999-01-01')
+AND (e.birth_date BETWEEN '1964-01-01' AND '1965-12-31')
+ORDER BY emp_no;
+
+SELECT COUNT (title), title
+INTO mentorship_titles_2
+FROM mentorship_eligibility_2 as me
+GROUP BY me.title
+ORDER BY COUNT (title) DESC;
